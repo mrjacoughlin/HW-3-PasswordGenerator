@@ -1,4 +1,4 @@
-let lowerCaseCharacters = [
+let LowerCaseCharacters = [
   "a",
   "b",
   "c",
@@ -28,7 +28,7 @@ let lowerCaseCharacters = [
   "y",
   "z",
 ];
-let upperCasedCharacters = [
+let upperCaseCharacters = [
   "A",
   "B",
   "C",
@@ -89,30 +89,44 @@ function getPasswordOptions() {
     alert("Please Provide Password Length As A Number");
     return;
   }
+
+  if (length < 8) {
+    alert("Password Must Be 8 Characters Or More");
+  }
+  if (length > 128) {
+    alert("Password Length Must Be Less Than 129 Characters");
+  }
+  let hasLowerCaseCharacters = confirm(
+    "Click OK to confirm including lower case characters."
+  );
+  let hasUpperCaseCharacters = confirm(
+    "Click OK to confirm including UPPER CASE characters."
+  );
+  let hasSpecialCharacters = confirm(
+    "Click OK to confirm including  *&^Special^&* characters."
+  );
+  let hasNumericCharacters = confirm(
+    "Click OK to confirm including Numeric characters."
+  );
+  if (
+    hasLowerCaseCharacters === false &&
+    hasUpperCaseCharacters === false &&
+    hasSpecialCharacters === false &&
+    hasNumericCharacters === false
+  ) {
+    alert("must select one chractyer type");
+  }
+
+  var getPasswordOptions = {
+    length: length,
+    hasLowerCaseCharacters: hasLowerCaseCharacters,
+    hasUpperCaseCharacters: hasUpperCaseCharacters,
+    hasSpecialCharacters: hasSpecialCharacters,
+    hasNumericCharacters: hasNumericCharacters,
+  };
 }
-if (length < 8) {
-  alert("Password Must Be 8 Characters Or More");
-}
-if (length > 128) {
-  alert("Password Length Must Be Less Than 129 Characters");
-}
-let hasLowerCaseCharacters = confirm(
-  "Click OK to confirm including lower case characters."
-);
-let hasUpperCaseCharacters = confirm(
-  "Click OK to confirm including UPPER CASE characters."
-);
-let hasSpecialCharacters = confirm(
-  "Click OK to confirm including  *&^Special^&* characters."
-);
-let hasNumericCharacters = confirm(
-  "Click OK to confirm including Numeric characters."
-);
-if (
-  hasLowerCaseCharacters === false &&
-  hasUpperCaseCharacters === false &&
-  hasSpecialCharacters === false &&
-  hasNumericCharacters === false
-) {
-  alert("must select one chractyer type");
+
+function getRandom(arr) {
+  let Index = Math.floor(Math.random() * arr.length);
+  let Element = arr[Index];
 }
