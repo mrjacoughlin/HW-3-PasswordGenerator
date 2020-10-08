@@ -127,6 +127,31 @@ function getPasswordOptions() {
 }
 
 function getRandom(arr) {
-  let Index = Math.floor(Math.random() * arr.length);
-  let Element = arr[Index];
+  let randIndex = Math.floor(Math.random() * arr.length);
+  let randElement = arr[randIndex];
+}
+
+function generatePassword() {
+  let options = getPasswordOptions();
+  let result = [];
+}
+
+let possibleCharacters = [];
+let guaranteedCharacters = [];
+
+if (options.hasLowerCaseCharacters) {
+  possibleCharacters = possibleCharacters.concat(lowerCaseCharacters);
+  guaranteedCharacters.push(getRandom(lowerCaseCharacters));
+}
+if (options.hasUpperCaseCharacters) {
+  possibleCharacters = possibleCharacters.concat(UpperCaseCharacters);
+  guaranteedCharacters.push(getRandom(UpperCaseCharacters));
+}
+if (options.hasSpecialCharacters) {
+  possibleCharacters = possibleCharacters.concat(specialCharacters);
+  guaranteedCharacters.push(getRandom(specialCharacters));
+}
+if (options.hasNumericCharacters) {
+  possibleCharacters = possibleCharacters.concat(NumericCharacters);
+  guaranteedCharacters.push(getRandom(NumericCharacters));
 }
