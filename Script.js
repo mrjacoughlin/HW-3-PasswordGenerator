@@ -81,3 +81,22 @@ let specialCharacters = [
   "-",
   "_",
 ]
+let numericCharacters = [
+    "0","1","2","3",'4','5','6','7','8','9'
+]
+
+function getPasswordOptions(){
+    let length =parseInt(
+        prompt("Enter How Many Characters Would You Like Your Password To Contain")
+    )
+    if (isNaN(length)=== true){
+        alert("Please Provide Password Length As A Number");
+        return
+    }
+}
+if(length<8){
+    alert("Password Must Be 8 Characters Or More")
+    return
+}
+if(length > 128){
+    alert("Password Length Must Be Less Than 129 Characters")
