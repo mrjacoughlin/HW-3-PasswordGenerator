@@ -61,9 +61,7 @@ let specialCharacters = [
   "@",
   "%",
   "+",
-  "'," 
-  "|",
-  "/",
+  "',",
   "'",
   "!",
   "#",
@@ -80,37 +78,41 @@ let specialCharacters = [
   "~",
   "-",
   "_",
-]
-let numericCharacters = [
-    "0","1","2","3",'4','5','6','7','8','9'
-]
+];
+let numericCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-function getPasswordOptions(){
-    let length =parseInt(
-        prompt("Enter How Many Characters Would You Like Your Password To Contain")
-    )
-    if (isNaN(length)=== true){
-        alert("Please Provide Password Length As A Number");
-        return
-    }
+function getPasswordOptions() {
+  let length = parseInt(
+    prompt("Enter How Many Characters Would You Like Your Password To Contain")
+  );
+  if (isNaN(length) === true) {
+    alert("Please Provide Password Length As A Number");
+    return;
+  }
 }
-if(length<8){
-    alert("Password Must Be 8 Characters Or More")
-    return
+if (length < 8) {
+  alert("Password Must Be 8 Characters Or More");
 }
-if(length > 128){
-    alert("Password Length Must Be Less Than 129 Characters")
+if (length > 128) {
+  alert("Password Length Must Be Less Than 129 Characters");
 }
- let  hasLowerCaseCharacters = confirm(
-    "Click OK to confirm including lower case characters."
-  )
-  let  hasUpperCaseCharacters = confirm(
-    "Click OK to confirm including UPPER CASE characters."
-  )
-  let  hasSpecialCharacters = confirm(
-    "Click OK to confirm including  *&^Special^&* characters."
-  )
-  let  hasNumericCharacters = confirm(
-    "Click OK to confirm including Numeric characters."
-  )
-  
+let hasLowerCaseCharacters = confirm(
+  "Click OK to confirm including lower case characters."
+);
+let hasUpperCaseCharacters = confirm(
+  "Click OK to confirm including UPPER CASE characters."
+);
+let hasSpecialCharacters = confirm(
+  "Click OK to confirm including  *&^Special^&* characters."
+);
+let hasNumericCharacters = confirm(
+  "Click OK to confirm including Numeric characters."
+);
+if (
+  hasLowerCaseCharacters === false &&
+  hasUpperCaseCharacters === false &&
+  hasSpecialCharacters === false &&
+  hasNumericCharacters === false
+) {
+  alert("must select one chractyer type");
+}
