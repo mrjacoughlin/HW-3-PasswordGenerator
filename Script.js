@@ -100,3 +100,17 @@ if(length<8){
 }
 if(length > 128){
     alert("Password Length Must Be Less Than 129 Characters")
+}
+ let  hasLowerCaseCharacters = confirm(
+    "Click OK to confirm including lower case characters."
+  )
+  let  hasUpperCaseCharacters = confirm(
+    "Click OK to confirm including UPPER CASE characters."
+  )
+  let  hasSpecialCharacters = confirm(
+    "Click OK to confirm including  *&^Special^&* characters."
+  )
+  let  hasNumericCharacters = confirm(
+    "Click OK to confirm including Numeric characters."
+  )
+  
