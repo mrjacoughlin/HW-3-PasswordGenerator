@@ -122,15 +122,16 @@ function getPasswordOptions() {
     alert("must select one chractyer type");
     return;
   }
+  let passwordOptions = {
+    length: length,
+    hasLowerCaseCharacters: hasLowerCaseCharacters,
+    hasUpperCaseCharacters: hasUpperCaseCharacters,
+    hasSpecialCharacters: hasSpecialCharacters,
+    hasNumericCharacters: hasNumericCharacters,
+  };
+  return passwordOptions;
 }
-let passwordOptions = {
-  length: length,
-  hasLowerCaseCharacters: hasLowerCaseCharacters,
-  hasUpperCaseCharacters: hasUpperCaseCharacters,
-  hasSpecialCharacters: hasSpecialCharacters,
-  hasNumericCharacters: hasNumericCharacters,
-};
-return passwordOptions;
+
 function getRandom(arr) {
   let Index = Math.floor(Math.random() * arr.length);
   let Element = arr[Index];
@@ -144,7 +145,7 @@ function generatePassword() {
   let possibleCharacters = [];
   let guaranteedCharacters = [];
 
-  if (options.haslowerCaseCharacters) {
+  if (options.hasLowerCaseCharacters) {
     possibleCharacters = possibleCharacters.concat(lowerCaseCharacters);
     guaranteedCharacters.push(getRandom(lowerCaseCharacters));
   }
