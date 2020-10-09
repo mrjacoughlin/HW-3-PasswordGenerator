@@ -122,17 +122,15 @@ function getPasswordOptions() {
     alert("must select one chractyer type");
     return;
   }
-
-  let passwordOptions = {
-    length: length,
-    hasLowerCaseCharacters: hasLowerCaseCharacters,
-    hasUpperCaseCharacters: hasUpperCaseCharacters,
-    hasSpecialCharacters: hasSpecialCharacters,
-    hasNumericCharacters: hasNumericCharacters,
-  };
-  return passwordOptions;
 }
-
+let passwordOptions = {
+  length: length,
+  hasLowerCaseCharacters: hasLowerCaseCharacters,
+  hasUpperCaseCharacters: hasUpperCaseCharacters,
+  hasSpecialCharacters: hasSpecialCharacters,
+  hasNumericCharacters: hasNumericCharacters,
+};
+return passwordOptions;
 function getRandom(arr) {
   let Index = Math.floor(Math.random() * arr.length);
   let Element = arr[Index];
@@ -175,6 +173,7 @@ function generatePassword() {
 
   return result.join("");
 }
+
 let generateBtn = document.getElementById("generate");
 
 function writePassword() {

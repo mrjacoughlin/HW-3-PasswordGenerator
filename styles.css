@@ -6,6 +6,6 @@
   width: 100%;
   text-align: center;
 }
-.container {
-  align-content: center;
+#password {
+  width: 100%;
 }
