@@ -1,11 +1,50 @@
-.content {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: lightgray;
-  padding: 20px;
-  width: 100%;
-  text-align: center;
+.container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 100px;
 }
-#password {
+.card {
+  border-style: double;
+}
+.content {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-color: lightgray;
+  padding: 25px;
+  padding-top: 50px;
   width: 100%;
+  border-style: double;
+  text-align: center;
+  text-decoration: double underline;
+}
+
+.h1 {
+  font-family: "Piazzolla", serif;
+}
+.input {
+  padding-top: 25px;
+  padding-left: 250px;
+  padding-right: 250px;
+  max-width: auto;
+  margin: auto;
+}
+
+.card-body {
+  border-style: double;
+}
+
+.card-body {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 100px;
+  margin-left: 100px;
+  background-color: lightsteelblue;
+}
+
+* {
+  box-sizing: border-box;
+}
+.img {
+  padding-top: 25px;
+  padding-left: 25px;
 }

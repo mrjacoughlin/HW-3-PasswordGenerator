@@ -26,21 +26,33 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@1,200&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <navbar>
-      <nav class="navbar navbar-dark bg-dark">
+      <nav
+        class="navbar navbar-expand-lg navbar-light"
+        style="background-color: lightslategrey"
+        ;
+      >
         <a class="navbar-brand" href="#">Password Generator</a>
       </nav>
     </navbar>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-4 mx.auto">
+        <div class="col-lg-12">
           <div class="content">
-            <h1>Password Generator</h1>
+            <header>
+              <h1>Random Password Generator</h1>
+            </header>
             <br />
-            <input type="text" id="Password" />
+            <div class="input">
+              <input type="text" id="Password" width="mx.auto" />
+            </div>
             <br />
             <div class="card-body">
               <div class="card-footer">
