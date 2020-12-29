@@ -3,9 +3,7 @@
   padding-bottom: 50px;
   padding-left: 100px;
 }
-.card {
-  border-style: double;
-}
+
 .content {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -16,11 +14,9 @@
   border-style: double;
   text-align: center;
   text-decoration: double underline;
-}
-
-.h1 {
   font-family: "Piazzolla", serif;
 }
+
 .input {
   padding-top: 25px;
   padding-left: 250px;
